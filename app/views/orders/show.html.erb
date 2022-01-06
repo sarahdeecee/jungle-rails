@@ -7,7 +7,7 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
-    <h4>Email: <%= @order.email %></h4>
+    <h4>Your order confirmation has been sent to <u><%= @order.email %></u>.</h4>
   </div>
 
   <div class="panel panel-default items">
@@ -31,7 +31,7 @@
           TOTAL:
         </th>
         <th>
-          <%= number_to_currency(cart_subtotal_cents / 100.00) %>
+          <%= number_to_currency(@order.total_cents / 100.00) %>
         </th>
       </tr>
     </tfoot>

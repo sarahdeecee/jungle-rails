@@ -92,13 +92,13 @@ RSpec.describe User, type: :model do
     end
     
     it 'does not log the user in when the email is incorrect' do
-      @login_user = User.authenticate_with_credentials('1234@test.com', '12345678')
-      expect(@user).to eq(@login_user)
+      @login_user = User.authenticate_with_credentials('test.com', '12345678')
+      expect(@user).not_to eq(@login_user)
     end
     
     it 'does not log the user in when the password is incorrect' do
-      @login_user = User.authenticate_with_credentials('1234@test.com', '12345678')
-      expect(@user).to eq(@login_user)
+      @login_user = User.authenticate_with_credentials('1234@test.com', '1')
+      expect(@user).not_to eq(@login_user)
     end
     
     it 'logs the user in when the email has extra whitespace around it' do

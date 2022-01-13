@@ -19,6 +19,9 @@ RSpec.feature "Add to cart", type: :feature, js: true do
   scenario "can click the 'Add' button for a product on the home page resulting in their cart count increasing by one" do
     # ACT
     visit root_path
+
+    expect(page).to have_content 'My Cart (0)'
+
     click_button('Add', :match => :first)
 
     # DEBUG

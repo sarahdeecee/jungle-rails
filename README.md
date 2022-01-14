@@ -1,6 +1,20 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application designed in **Ruby** and built with **Rails** for purposes of teaching Rails by example.
+
+## Features
+
+See all products in a given category
+![A screenshot of the interface](/docs/screenshot-products.png "A screenshot of a products view")
+
+See your cart and update quantities
+![A screenshot of the interface](/docs/screenshot-cart.png "A screenshot of a products view")
+
+See the products, quantities, and prices on the order confirmation
+![A screenshot of the interface](/docs/screenshot-order.png "A screenshot of a products view")
+
+Create new products and categories on the administrator dashboard (password protected)
+![A screenshot of admin interface](/docs/screenshot-newproduct.png "A screenshot of a products view")
 
 ## Additional Steps for Apple M1 Machines
 
@@ -16,9 +30,10 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
 4. Run `bin/rake db:reset` to create, load and seed db
 5. Create .env file based on .env.example
-6. Sign up for a Stripe account
+6. Sign up for a **Stripe** account
 7. Put Stripe (test) keys into appropriate .env vars
-8. Run `bin/rails s -b 0.0.0.0` to start the server
+8. Run `bin/rails s` to start the server
+9. Open your browser to [`http://localhost:3000/`](http://localhost:3000/) to see Jungle
 
 ## Stripe Testing
 
@@ -30,4 +45,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
-* Stripe
+* Stripe [Homepage](https://www.stripe.com/)
+
+## Testing
+* [Rspec](https://rspec.info/)
+* [Capybara with Rspec](https://github.com/teamcapybara/capybara)
